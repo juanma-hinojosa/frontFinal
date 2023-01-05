@@ -69,7 +69,7 @@ const Volunter = () => {
                 </div>
             </div>
 
-            <Form className = "formulario" >
+            <div className = "formulario" >
                 <h4>Dejanos tus datos y tu pasion por el futbol</h4>
                 {/* Esto OBJECT se va encargar de mapear e iterar nuestro imputs */}
                 {Object.keys(inputs).map((key, index) => (
@@ -92,7 +92,7 @@ const Volunter = () => {
                         Enviar Datos
                     </Button>
                 </div>
-            </Form>
+            </div>
         </div>
     )
 }
