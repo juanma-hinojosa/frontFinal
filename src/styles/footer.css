@@ -6,11 +6,11 @@
     padding: 30px;
 }
 
-p {
+.footer-content > p {
     color: white;
 }
 
-a {
+.footer-content > a {
     color:white;
     margin-left: 10px;
 
