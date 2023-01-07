@@ -4,10 +4,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 600px;
+    /* height: 600px; */
     color: white;
     display: flex;
     align-items: center;
+
+    padding: 50px;
 }
 
 .ventajas-banner {
@@ -58,13 +60,30 @@ ul {
     }
 
     .ventajas-banner>.text-banner {
-        width: 80%;
+        width: 100%;
         margin-bottom: 80px;
+        padding: 40px 10px;
+
     }
 }
 
 @media (max-width: 750px) {
     .ventajas-banner > .img-banner {
         width: 80%;
+    }
+}
+
+@media (max-width: 550px) {
+    .ventajas-banner {
+        padding: 40px 10px;
+    }
+
+    .banner-volunter {
+        padding: 40px 10px;
+    }
+
+    .banner-volunter>.parrafo {
+        width: 100%;
+        margin: 0;
     }
 }
