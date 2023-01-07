@@ -39,7 +39,7 @@ const Highlights = () => {
             </div>
 
             <div className="video-title">
-            <h4>El Camino del Campeon</h4>
+                <h4>El Camino del Campeon</h4>
 
             </div>
 
@@ -62,15 +62,18 @@ const Highlights = () => {
 
             <div className="video-final">
                 <h4>Argentina vs Francia | Final | Copa Mundial de la FIFA Catar 2022</h4>
-                <div className="video">
-                    <iframe width="561" height="316" src="https://www.youtube.com/embed/hKG43vDQb3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div className="video-final-content">
+                    <div className="video-final-parrafo">
+                        <h2>18 dic 2022</h2>
+                        <p>
+                            La selección albiceleste derrotó por penales al elenco galo luego de igualar 3 a 3 en un encuentro para el infarto y, de esta manera, se consagró campeona del mundo por tercera vez
+                        </p>
+                    </div>
+                    <div className="video">
+                        <iframe src="https://www.youtube.com/embed/cqsuf8VSxuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    </div>
                 </div>
-
-                <h2>18 dic 2022</h2>
-                <p>
-                    La selección albiceleste derrotó por penales al elenco galo luego de igualar 3 a 3 en un encuentro para el infarto y, de esta manera, se consagró campeona del mundo por tercera vez
-
-                </p>
             </div>
 
         </div>
