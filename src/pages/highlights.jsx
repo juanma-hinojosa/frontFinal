@@ -10,7 +10,10 @@ const Highlights = () => {
     // const URL = "http://localhost:3001/lista";
 
     //Variable Global
-    const URL = "https://backfinal-production-03d9.up.railway.app/lista";
+    //const URL = "https://backfinal-production-03d9.up.railway.app/lista";
+    
+    //Variable Global BACK RENDER
+    const URL = "https://back-fifa-db.onrender.com/lista";
 
     const getVideos = async () => {
         try {
