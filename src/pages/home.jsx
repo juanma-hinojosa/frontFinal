@@ -11,9 +11,11 @@ const Home = () => {
     //Variable Local
     // const URL = "http://localhost:3001/datos";
 
-    //Variable GLobal
-    const URL = "https://backfinal-production-03d9.up.railway.app/datos"
+    //Variable GLobal Rileway
+    //const URL = "https://backfinal-production-03d9.up.railway.app/datos"
 
+    //Variable Back Deploy RENDER
+    const URL = "https://back-fifa-db.onrender.com/datos"
 
     const getPersonas = async () => {
         try {
