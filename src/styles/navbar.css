@@ -11,12 +11,12 @@
     align-items: center;
 }
 
-.navbar-wrapper > a {
+.link {
     color: white;
     text-decoration: none;
     transition: .3s;
 }
 
-.navbar-wrapper > a:hover {
+.link:hover {
     color: #D5C46C;
 }

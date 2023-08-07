@@ -8,12 +8,14 @@ import "../../src/styles/home.css"
 const Home = () => {
     const [datos, setDatos] = useState([]);
     
-    //Variable Local
+    //Variable Local MONGO DB
     // const URL = "http://localhost:3001/datos";
 
-    //Variable GLobal
-    const URL = "https://backfinal-production-03d9.up.railway.app/datos"
+    //Variable GLobal 
+    // const URL = "https://backfinal-production-03d9.up.railway.app/datos"
 
+    //Variable Global BACK RENDER
+    const URL = "https://back-fifa-db.onrender.com/datos";
 
     const getPersonas = async () => {
         try {

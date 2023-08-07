@@ -1,34 +1,38 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
 import "../../src/styles/highlights.css";
 import Banner from "../img/bannerHigh.jpg";
+import datos from "../json/datos.json";
+import VideoComponent from "../components/videoComponent";
 
 const Highlights = () => {
-    const [datos, setDatos] = useState([]);
+    // const [datos, setDatos] = useState([]);
 
-    //Variable LOCAL
-    // const URL = "http://localhost:3001/lista";
+    //Variable LOCAL de MONGO DB
+    // const URL = "http://localhost:3001/lista";  
 
-    //Variable Global
-    const URL = "https://backfinal-production-03d9.up.railway.app/lista";
+    // Variable Global
+    // const URL = "https://backfinal-production-03d9.up.railway.app/lista";
 
-    const getVideos = async () => {
-        try {
-            const { data } = await axios.get(URL);
-            setDatos(data.datos)
-            console.log(data.datos);
-        } catch (error) {
-            console.error(error);
-        }
-    }
+    //Variable Global BACK RENDER
+    // const URL = "https://back-fifa-db.onrender.com/lista";
 
-    useEffect(() => {
-        getVideos()
-    }, []);
+    // const getVideos = async () => {
+    //     try {
+    //         const { data } = await axios.get(URL);
+    //         setDatos(data.datos)
+    //         console.log(data.datos);
+    //     } catch (error) {
+    //         console.error(error);
+    //     }
+    // }
 
+    // useEffect(() => {
+    //     getVideos()
+    // }, []);
     return (
-        <div className="highlights-content" >
-            <div className="banner-wrapper">
+        <main className="highlights-content" >
+            <figure className="banner-wrapper">
                 <div className="banner-title">
                     <h4>La casa de los mejores momentos de Catar 2022™</h4>
                     <p>FIFA+ es el sitio donde encontrarás lo más destacado de cada partido en la Copa Mundial de la FIFA, minutos después del pitido final. No te pierdas lo mejor de Catar 22™. Todos los goles, toda la acción, en un solo lugar. También disponible con lenguaje de señas para personas con discapacidad auditiva.</p>
@@ -36,31 +40,25 @@ const Highlights = () => {
                 <div className="banner-img">
                     <img src={Banner} alt="" />
                 </div>
-            </div>
+            </figure>
 
             <div className="video-title">
                 <h4>El Camino del Campeon</h4>
-
             </div>
 
-            <div className="videos-content">
-
+            <figure className="videos-content">
                 {datos.map(dato =>
-                    <div className="video">
-                        <iframe width="" height="205" src={dato.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h2>
-                            {dato.fecha}
-                        </h2>
-                        <p>
-                            {dato.review}
-                        </p>
-                    </div>
-
+                    <VideoComponent
+                        key={dato._id}
+                        video={dato.video}
+                        fecha={dato.fecha}
+                        review={dato.review}
+                    />
                 )}
-            </div>
+            </figure>
 
 
-            <div className="video-final">
+            <figure className="video-final">
                 <h4>Argentina vs Francia | Final | Copa Mundial de la FIFA Catar 2022</h4>
                 <div className="video-final-content">
                     <div className="video-final-parrafo">
@@ -70,13 +68,12 @@ const Highlights = () => {
                         </p>
                     </div>
                     <div className="video">
-                        <iframe src="https://www.youtube.com/embed/cqsuf8VSxuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+                        <iframe src="https://www.youtube.com/embed/UFxfqk-hWcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
-            </div>
+            </figure>
 
-        </div>
+        </main>
     )
 }
 

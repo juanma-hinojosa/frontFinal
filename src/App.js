@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/footer";
-import Navbar from "./components/navbar";
+import NavbarComponent from "./components/navbar";
 import Error from "./pages/error";
 import Groups from "./pages/groups";
 import Highlights from "./pages/highlights";
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        <NavbarComponent />
         <Routes>
           <Route index element={<Home />} />
           <Route path="/groups" element={<Groups />} />

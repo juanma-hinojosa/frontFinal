@@ -8,7 +8,10 @@ import banner from "../img/box-volunter.jpg";
 const Volunter = () => {
     // const URL = "http://localhost:3001/crear";
 
-    const URL = "https://backfinal-production-03d9.up.railway.app/crear"
+    // const URL = "https://backfinal-production-03d9.up.railway.app/crear"
+
+    //Variable Global BACK RENDER
+    const URL = "https://back-fifa-db.onrender.com/crear";
 
 
     const [inputs, setInputs] = useState({
@@ -39,16 +42,16 @@ const Volunter = () => {
     }
 
     return (
-        <div className="volunter-wrapper">
-            <div className="banner-volunter">
+        <main className="volunter-wrapper">
+            <section className="banner-volunter">
                 <div className="parrafo">
                     <h4>Volunteers - El motor de la Copa Mundial de la FIFA™</h4>
                     <p>El programa de voluntariado de la FIFA tiene un gran valor. El valor de crear algo memorable. Es poder decir "fue gracias a mí". Implica lograr una gran conexión con todo el mundo para crear experiencias inolvidables e irrepetibles para Catar y para todo el mundo, que quedarán para siempre en tu memoria y en la de los aficionados. Para que la magia surja necesitamos personas como tú, que nos unes de maneras novedosas, generando recuerdos imborrables y un legado del que sentirnos orgullosos. Conviértete en una pieza clave del engranaje futbolístico. Este es tu momento.</p>
                 </div>
 
-            </div>
+            </section>
 
-            <div className="ventajas-banner">
+            <section className="ventajas-banner">
                 <div className="text-banner">
                     <h4>Una experiencia única con ventajas exclusivas</h4>
                     <p>En el programa de voluntariado de la Copa Mundial de la FIFA Catar 2022™ no se ofrece remuneración alguna, pero resulta increíblemente gratificante en muchos otros aspectos.</p>
@@ -67,7 +70,7 @@ const Volunter = () => {
                 <div className="img-banner">
                     <img src={banner} alt="" />
                 </div>
-            </div>
+            </section>
 
             <div className = "formulario" >
                 <h4>Dejanos tus datos y tu pasion por el futbol</h4>
@@ -93,7 +96,7 @@ const Volunter = () => {
                     </Button>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }
 

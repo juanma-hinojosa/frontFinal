@@ -68,8 +68,18 @@ ul {
 }
 
 @media (max-width: 750px) {
-    .ventajas-banner > .img-banner {
+    .ventajas-banner>.img-banner {
         width: 80%;
+    }
+
+    .banner-volunter>.parrafo {
+        /* padding: 30px 15px; */
+        width: 100%;
+        margin: 0;
+    }
+
+    .banner-volunter {
+        padding: 30px 15px;
     }
 }
 
